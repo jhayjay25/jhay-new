@@ -1,0 +1,169 @@
+header {
+    background : url(/img/img1.jpg);
+    color: white;
+    text-align: center;
+   
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+
+.container a {
+  text-decoration: none;
+  color: white; 
+  padding: 3px 7px;
+  transition: all 0.3s ease; 
+  border-radius: 1%;
+  border-color: black;
+  display: inline-block;
+
+}
+
+
+.container a:not(:has(button)) {
+  display: inline-block;
+}
+
+.container a:hover:not(:has(button)) {
+  background-color: #ddd; 
+  color: black;
+  transform: scale(1.2);
+  border-radius: 12px;
+}
+
+.container #submit_btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all ease-in-out 0.5s;
+}
+
+.container #submit_btn:hover {
+  background-color: #0056b3;
+}
+
+  .logo {
+    border-bottom: px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-inline-start: 0%;
+  }
+
+  .eximg1 {
+    width: 300px;
+    height: 200px;
+    margin-left: auto;
+  }
+  
+  
+ 
+
+nav {
+    background: url(/img/img2.jpg);
+    float: left;
+    width: 20%;
+    height: 500px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    text-decoration: dotted;
+    text-transform: unset;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  nav ul li a:hover {
+    background-color: #343636;
+    padding: 6px 24px;
+    width: 100%;
+    align-items: center;
+    color: black;
+    border-radius: 20px;
+    border-color: rgb(255, 255, 255);
+    border-style:double
+ 
+   }
+  
+  article {
+    background-color: #2c3538;
+    float: left;
+    width: 75%;
+    height: 500px;
+    padding-left: 5%;
+  }
+
+  footer{
+    text-align: center;
+    background: url(/img/img1.jpg);
+    color: white;
+  }
+  footer div a{
+    text-decoration: none ;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+footer div a:hover {
+    color:  rgb(76, 70, 70); 
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+}
+
+
+.about-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}

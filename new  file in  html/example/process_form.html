@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE LAYOUT STRUCTURE</title>
+    <link rel="stylesheet" href="/css stylesheet/customstyle.css">
+</head>
+<body>
+    <header>
+        <div>
+            <br> <img src="../img/logo.jpg" alt="College of Information and Computing Sciences" class="logo">
+            <h1><em>College of Information and Computing Sciences</em></h1>
+            <h3>Bachelor of Science in Information System</h3>
+        </div>
+        <div class="container">
+            <a href="/Home.html">Home</a> |
+            <a href="/about.html">About</a> |
+            <a href="/contact us .html">Contact Us</a> |
+            <a href="/inquiry.html">Inquiry</a> |
+            <a href="/profile.html">Profile</a> |
+            <a href="/login.html"><button id="submit_btn"><em>Login</em></button></a>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul><li><a href="#">Heading</a></li></ul>
+            <ul><li><a href="/table.html">Tables</a></li></ul>
+            <ul><li><a href="/form.html">Forms</a></li></ul>
+            <ul><li><a href="/img.html">Image</a></li></ul>
+            <ul><li><a href="/list.html">HTML Lists</a></li></ul>
+            <ul><li><a href="/forms2.html">Forms2</a></li></ul>
+        </nav>
+
+        <style>
+            .result-box{
+                background-color: rgb(67, 64, 64);
+                margin-left: 12px;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                padding: 13px;
+                border-radius: 12px;
+                margin: 12px auto;
+                border: solid white;
+                color: white;
+
+            }
+            .result-box span{
+                background-color: rgb(61, 57, 57);
+                padding: 6px;
+                border-left: 300px;
+                border: solid white;
+            }
+        </style>
+        <article><br>
+            <div class="result-box">
+                <h3>Form Submission Result</h3>
+                <p>First Name: <span id="displayFname"></span></p>
+                <p>Last Name: <span id="displayLname"></span></p>
+                <p>Email: <span id="displayEmail"></span></p>
+                <p>Gender: <span id="displayGender"></span></p>
+                <p>Birthdate: <span id="displayBirthdate"></span></p>
+            </div>
+                 
+        </article>
+    </section>
+    <script>
+
+function saveData() {
+    
+    console.log('Button clicked');
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const gender = document.getElementById('gender').value;
+            const birthdate = document.getElementById('birthdate').value;
+
+            
+            localStorage.setItem('fname', fname);
+            localStorage.setItem('lname', lname);
+            localStorage.setItem('email', email);
+            localStorage.setItem('gender', gender);
+            localStorage.setItem('birthdate', birthdate);
+
+            
+            displayData();
+        }
+
+        function displayData() {
+            
+            const storedFname = localStorage.getItem('fname');
+            const storedLname = localStorage.getItem('lname');
+            const storedEmail = localStorage.getItem('email');
+            const storedGender = localStorage.getItem('gender');
+            const storedBirthdate = localStorage.getItem('birthdate');
+        }
+        
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+    
+        
+        document.getElementById('displayFname').textContent = getQueryParam('fname');
+        document.getElementById('displayLname').textContent = getQueryParam('lname');
+        document.getElementById('displayEmail').textContent = getQueryParam('email');
+        document.getElementById('displayGender').textContent = getQueryParam('gender');
+       
+        let birthdate = getQueryParam('birthdate');
+    if (birthdate) {
+        const date = new Date(birthdate);
+        document.getElementById('displayBirthdate').textContent = date.toDateString();
+    }
+
+    window.onload = displayData;
+    </script>
+    <footer>
+        <h2>Tutorialspoint</h2>
+        <div>
+            <a href="#">About us</a>
+            <a href="#">Refund policy</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">FAQ's</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <p>Copyrights © TUTORIALS POINT (INDIA) PRIVATE LIMITED. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

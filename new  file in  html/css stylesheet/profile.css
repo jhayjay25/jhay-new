@@ -1,0 +1,152 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(32, 31, 31); 
+    margin: 0;
+    padding: 0;
+    color: white; 
+}
+
+header {
+    background: url(/img/img1.jpg);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+
+header .logo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header h3 {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container a {
+  text-decoration: none;
+  color: white; 
+  padding: 3px 7px;
+  transition: all 0.3s ease; 
+  border-radius: 1%;
+  border-color: black;
+  display: inline-block;
+}
+
+
+.container a:not(:has(button)) {
+  display: inline-block;
+}
+
+.container a:hover:not(:has(button)) {
+  background-color: #ddd; 
+  color: black;
+  transform: scale(1.2);
+  border-radius: 12px;
+}
+
+
+
+#submit_btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#submit_btn:hover {
+    background-color: #0056b3;
+}
+
+
+.col-md-8 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+    background-color: #181e20; 
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    color: #eceff1; 
+    box-shadow: 0 0 15px rgba(57, 92, 125, 0.5); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgba(14, 112, 211, 0.7);
+}
+
+.card h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    font-weight: bold;
+}
+
+.col-md-9 {
+    flex: 0 0 75%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #cdcaca;
+    margin: 20px 0;
+    border-color: white;
+    border-style: double;
+}
+
+
+footer{
+    text-align: center;
+    background: url(/img/img1.jpg);
+    color: white;
+  }
+  footer div a{
+    text-decoration: none ;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+footer div a:hover {
+    color:  rgb(76, 70, 70); 
+}
